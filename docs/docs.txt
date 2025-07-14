@@ -1,0 +1,26 @@
+Home page: 
+Header: 
+top 
+search form 
+navbar (full screen)
+
+home slide (full screen)
+Danh sách sản phẩm:
+sản phẩm mới 
+sản phẩm nổi bật 
+card 
+bán chạy trong tuần 
+sản phẩm xem nhiều và danh mục hiển thị ở home (category cho thêm 1 field is display home)
+Tin tức 
+
+
+Header: 
+logo một số hãng 
+Footer 
+
+
+Trang giới thiệu: 
+Trang contact: 
+Trang tin tức:
+Trang sản phẩm: 
+Trang chi tiết sản phẩm: 
