@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 
-button, a {
+button, a, span {
     display: inline-block;
 }
 
@@ -119,6 +119,16 @@ button {
 
 .fw7 {
     font-weight: 700;
+}
+
+.hover-effect i,
+.hover-effect {
+    transition: .25s ease-in-out;
+}
+
+.hover-effect:hover,
+.hover-effect:hover i {
+    color: #fbbf22;
 }
 
 @media (max-width: 576px) {

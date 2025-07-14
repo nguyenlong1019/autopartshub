@@ -1,4 +1,44 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/partial/header.css' %}">
 <div class="header" id="header">
-    
+    <div class="top-header container">
+        <div>
+            <span>Chào mừng bạn tới AutoPartsHub</span>
+            <span>Hotline: 0938.81.0886</span>
+        </div>
+        <div>
+            <a href="#" class="hover-effect"><i class="ri-lock-unlock-fill"></i> Đăng xuất</a>
+            <a href="#" class="hover-effect"><i class="ri-user-fill"></i> Tài khoản</a>
+        </div>
+    </div>
+    <div class="search-form container">
+        <div class="logo">
+            <img src="{% static 'assets/images/main_logo.jpg' %}" alt="Logo">
+        </div>
+        <div>
+            <form action="">
+                <input type="text">
+                <button type="submit" title="Nút tìm kiếm"><i class="ri-search-line"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="navbar container-fluid">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="ri-home-7-fill"></i> Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Tin tức</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Liên hệ</a>
+            </li>
+        </ul>
+    </div>
 </div>

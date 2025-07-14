@@ -1,0 +1,31 @@
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    font-size: 12px;
+    color: #054086;
+}
+
+.top-header span {
+    color: #054086;
+}
+
+.top-header span:first-child {
+    padding-right: 8px;
+    border-right: 2px solid #054086;
+}
+
+.top-header span:last-child {
+    padding-left: 8px;
+}
+
+.top-header a {
+    color: #054086;
+    margin-right: 10px;
+}
+
+.top-header a i {
+    color: #054086;
+    font-size: 14px;
+}
