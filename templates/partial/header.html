@@ -9,6 +9,7 @@
         <div>
             <a href="#" class="hover-effect"><i class="ri-lock-unlock-fill"></i> Đăng xuất</a>
             <a href="#" class="hover-effect"><i class="ri-user-fill"></i> Tài khoản</a>
+            <button type="button" class="m-search-btn"><i class="ri-search-line"></i></button>
         </div>
     </div>
     <div class="search-form-wrapper container">
@@ -17,13 +18,14 @@
         </div>
         <div class="search-form">
             <form action="">
-                <input type="text">
+                <input type="text" placeholder="Tìm kiếm sản phẩm">
                 <button type="submit" title="Nút tìm kiếm"><i class="ri-search-line"></i></button>
             </form>
         </div>
     </div>
     <div class="navbar container-fluid" id="navbar">
-        <ul class="nav-list container">
+        <button type="button" id="toggleMenu"><i class="ri-menu-line"></i></button>
+        <ul class="nav-list container" id="navList">
             <li class="nav-item active">
                 <a href="#" class="nav-link"><i class="ri-home-7-fill"></i> Trang chủ</a>
             </li>
@@ -49,10 +51,41 @@
     window.addEventListener('scroll', function () {
         const headerBottom = header.getBoundingClientRect().bottom;
 
-        if (headerBottom <= 0) {
+        if (window.innerWidth > 768 && headerBottom <= 0) {
             navE.classList.add("scrolled");
         } else {
             navE.classList.remove("scrolled");
         }
+    });
+
+    const searchBtn = document.querySelector('.m-search-btn');
+    const searchForm = document.querySelector('.search-form');
+
+    searchBtn.addEventListener('mouseenter', () => {
+        searchForm.classList.add('show');
+    });
+
+    // searchBtn.addEventListener('mouseleave', () => {
+    //     setTimeout(() => {
+    //         searchForm.classList.remove('show');
+    //     }, 300);
+    // });
+
+    searchForm.addEventListener('mouseenter', () => {
+        searchForm.classList.add('show');
+    });
+
+    // searchForm.addEventListener('mouseleave', () => {
+    //     searchForm.classList.remove('show');
+    // });
+
+    document.addEventListener('click', function (e) {
+        if (!searchForm.contains(e.target) && !searchBtn.contains(e.target)) {
+            searchForm.classList.remove('show');
+        }
+    });
+
+    document.getElementById('toggleMenu').addEventListener('click', () => {
+        document.getElementById('navList').classList.toggle('show');
     });
 </script>

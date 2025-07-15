@@ -85,6 +85,7 @@
 }
 
 .navbar {
+    position: relative;
     background-color: #054086;
 }
 
@@ -127,6 +128,136 @@
     transition: .25s ease-in-out;
 }
 
+.navbar.scrolled .nav-list .nav-item .nav-link {
+    color: #054086;
+    border: none;
+}
+
+.navbar.scrolled .nav-list .nav-item.active .nav-link {
+    color: #fff;
+}
+
 .navbar .nav-list .nav-item:hover .nav-link {
     color: #fbbf22;
 }
+
+#toggleMenu {
+    display: none;
+    margin: 0 15px;
+    height: 40px;
+    background-color: transparent;
+}
+
+#toggleMenu i {
+    color: #fff;
+    font-size: 15px;
+}
+
+.m-search-btn {
+    position: relative;
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 11112;
+}
+
+.m-search-btn i {
+    font-size: 15px;
+    color: #054086;
+}
+
+@media (max-width: 768px) {
+    #toggleMenu {
+        display: inline-block;
+    }
+
+    .m-search-btn {
+        display: inline-block;
+    }
+
+    .top-header {
+        justify-content: center;
+    }
+
+    .top-header span {
+        display: none;
+    }
+
+    .search-form::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -24px;
+        height: 24px;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .search-form {
+        /* display: block; */
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11111;
+    }
+    .search-form.show {
+        display: block;
+    }
+
+    .search-form-wrapper {
+        justify-content: center;
+    }
+
+    .navbar .nav-list {
+        flex-direction: column;
+        display: none;
+        height: 0;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        color: #333;
+        transition: .25s ease-in-out;
+    }
+
+    .navbar .container {
+        padding: 0;
+    }
+
+    .navbar .nav-list.show {
+        height: auto;
+        display: flex;
+        align-items: start;
+    }
+
+    .navbar .nav-list .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .navbar .nav-list .nav-item .nav-link {
+        color: #054086;
+        border: none;
+    }
+
+    .navbar .nav-list .nav-item.active .nav-link {
+        color: #fff;
+    }
+    
+    .navbar.scrolled .nav-list .nav-item .nav-link {
+        color: #054086;
+        border: none;
+    }
+    
+    .navbar.scrolled .nav-list .nav-item.active .nav-link {
+        color: #fff;
+    }
+    
+    .navbar .nav-list .nav-item:hover .nav-link {
+        color: #fbbf22;
+    }
+}
+
