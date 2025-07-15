@@ -135,6 +135,53 @@ button {
     height: 2000px;
 }
 
+.slideshow-container {
+    width: 100%;
+    position: relative;
+}
+
+.slideshow-container .slide {
+    display: none;
+}
+
+.slideshow-container .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slideBtn {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    color: #fbbf22;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: .25s ease-in-out;
+}
+
+.slideBtn i {
+    font-size: 21px;
+}
+
+.slideBtn:hover {
+    opacity: 1;
+    border-color: #fbbf22;
+}
+
+.prevBtn {
+    left: 20px;
+}
+
+.nextBtn {
+    right: 20px;
+}
+
 @media (max-width: 576px) {
     #toast-container {
         right: 40px;

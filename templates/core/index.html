@@ -8,10 +8,50 @@
 {% include 'partial/header.html' %}
 
 <div class="app-content">
-    
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="{% static 'assets/images/slides/slider_1.webp' %}" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="{% static 'assets/images/slides/slider_2.webp' %}" alt="Slide 1">
+        </div>
+        <button type="button" onclick="plusSlides(-1)" class="prevBtn slideBtn"><i class="ri-arrow-left-s-line"></i></button>
+        <button type="button" onclick="plusSlides(1)" class="nextBtn slideBtn"><i class="ri-arrow-right-s-line"></i></button>
+    </div>
+
+    <div class="product-section container">
+        <div class="product-wrapper">
+            
+        </div>
+        <div class="product-category">
+
+        </div>
+    </div>
 </div>
 
 {% include 'partial/footer.html' %}
 
 {% endblock %}
-{% block scripts %}{% endblock %}
+{% block scripts %}
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+
+{% endblock %}
