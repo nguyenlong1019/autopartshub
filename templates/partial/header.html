@@ -11,20 +11,20 @@
             <a href="#" class="hover-effect"><i class="ri-user-fill"></i> Tài khoản</a>
         </div>
     </div>
-    <div class="search-form container">
+    <div class="search-form-wrapper container">
         <div class="logo">
             <img src="{% static 'assets/images/main_logo.jpg' %}" alt="Logo">
         </div>
-        <div>
+        <div class="search-form">
             <form action="">
                 <input type="text">
                 <button type="submit" title="Nút tìm kiếm"><i class="ri-search-line"></i></button>
             </form>
         </div>
     </div>
-    <div class="navbar container-fluid">
-        <ul class="nav-list">
-            <li class="nav-item">
+    <div class="navbar container-fluid" id="navbar">
+        <ul class="nav-list container">
+            <li class="nav-item active">
                 <a href="#" class="nav-link"><i class="ri-home-7-fill"></i> Trang chủ</a>
             </li>
             <li class="nav-item">
@@ -42,3 +42,17 @@
         </ul>
     </div>
 </div>
+<script>
+    const navE = document.getElementById('navbar');
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', function () {
+        const headerBottom = header.getBoundingClientRect().bottom;
+
+        if (headerBottom <= 0) {
+            navE.classList.add("scrolled");
+        } else {
+            navE.classList.remove("scrolled");
+        }
+    });
+</script>

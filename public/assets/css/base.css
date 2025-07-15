@@ -131,6 +131,10 @@ button {
     color: #fbbf22;
 }
 
+.app-content {
+    height: 2000px;
+}
+
 @media (max-width: 576px) {
     #toast-container {
         right: 40px;
