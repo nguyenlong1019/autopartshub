@@ -5,6 +5,12 @@ from tinymce.models import HTMLField
 
 
 class Product(TimeInfo):
+    PRODUCT_STATUS = (
+        (0, 'Draft'),
+        (1, 'Published'),
+        (2, 'Deleted')
+    )
+
     STOCK_STATUS = (
         (0, 'Out Of Stock'),
         (1, 'In Stock')
@@ -21,6 +27,7 @@ class Product(TimeInfo):
     quantity = models.SmallIntegerField(default=0)
     stock_status = models.SmallIntegerField(default=1, choices=STOCK_STATUS)
     manage_stock = models.BooleanField(default=False)
+    status = models.SmallIntegerField(default=0, choices=PRODUCT_STATUS)
 
 
     class Meta:
