@@ -57,7 +57,8 @@ button {
 }
 
 .container {
-    max-width: 1320px;
+    /* max-width: 1320px; */
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 16px;
 }
@@ -184,6 +185,17 @@ button {
 .tab-title h2 span {
     padding: 10px 0;
     border-bottom: 3px solid #054086;
+}
+
+.product-section {
+    padding: 40px 0 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.product-category {
+    max-width: 260px;
 }
 
 .product-list {
