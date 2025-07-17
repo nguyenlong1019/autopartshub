@@ -58,7 +58,7 @@ button {
 
 .container {
     /* max-width: 1320px; */
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 16px;
 }
@@ -188,14 +188,74 @@ button {
 }
 
 .product-section {
+    gap: 16px;
     padding: 40px 0 10px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
 
+.product-img-banner {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.product-img-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: .25s ease-in-out;
+}
+
+.product-img-banner img:hover {
+    transform: scale(1.05);
+}
+
 .product-category {
-    max-width: 260px;
+    flex: 1;
+    width: 300px;
+    padding: 0 16px;
+}
+
+.product-wrapper {
+    flex: 3;
+}
+
+.product-category h2.category-title {
+    background-color: #054086;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 45px;
+    font-weight: 400;
+}
+
+ul.categories {
+    list-style: none;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+}
+
+ul.categories li.category-item a.category-link {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #0c0c0c;
+    padding: 15px 25px 15px 10px;
+    border-bottom: 1px solid #ddd;
+    transition: .25s ease-in-out;
+    font-weight: 500;
+    width: 100%;
+}
+
+ul.categories li.category-item a.category-link:hover {
+    color: #fbbf22;
+}
+
+ul.categories li.category-item a.category-link i {
+    font-size: 12px;
+    margin-right: 6px;
 }
 
 .product-list {
@@ -205,6 +265,7 @@ button {
 }
 
 .card {
+    background-color: #fff;
     width: 210px;
     margin-bottom: 30px;
     padding: 12px;
